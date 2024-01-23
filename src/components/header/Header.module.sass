@@ -1,0 +1,49 @@
+.header
+    color: #000
+    font-size: 24px
+    font-weight: 500
+    margin-bottom: 50px
+    // position: relative
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+.hamburger
+    height: 26px
+    cursor: pointer
+    width: 32px
+    pos
+    z-index: 2
+    display: none
+    flex-direction: column
+    justify-content: space-between
+    z-index: 11
+    &.open
+        .line1
+            transform: rotate(45deg)
+        .line2
+            transform: scaleY(0)
+        .line3
+            transform: rotate(-45deg)
+
+@media (max-width: 1000px)
+    .hamburger
+        display: flex
+
+.line
+    display: block
+    height: 4px
+    width: 100%
+    border-radius: 10px
+    background: #0e2431
+
+.line1
+    transform-origin: 0% 0%
+    transition: transform 0.4s ease-in-out
+
+.line2
+    transition: transform 0.2s ease-in-out
+
+.line3
+    transform-origin: 0% 100%
+    transition: transform 0.4s ease-in-out

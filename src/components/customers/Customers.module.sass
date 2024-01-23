@@ -1,0 +1,72 @@
+.customers
+    background: #fff
+    filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.50))
+    border-radius: 30px
+    padding: 30px 38px
+    overflow-x: hidden
+    max-width: calc(100vw - 40px)
+    @media (max-width: 1000px)
+        padding: 30px 20px
+    &__header
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 40px
+        @media (max-width: 1000px)
+            flex-direction: column
+            gap: 20px
+            align-items: flex-start
+    &__footer
+        display: flex
+        align-items: center
+        justify-content: space-between
+        gap: 30px
+        margin-top: 30px
+        &__info
+            color: #B5B7C0
+            font-weight: 500
+            @media (max-width: 1000px)
+                font-size: 12px
+
+.title
+    color: #000
+    font-size: 22px
+    font-weight: 600
+
+.subtitle
+    color: #16C098
+    margin-top: 7px
+
+.search
+    border-radius: 10px
+    background: #F9FBFF
+    padding: 8px
+    display: flex
+    align-items: center
+    gap: 8px
+    @media (max-width: 1000px)
+        width: 100%
+    input
+        background: transparent
+        @media (max-width: 1000px)
+            width: 100%
+
+.pagination
+    display: flex
+    gap: 12px
+    &__button
+        border-radius: 4px
+        border: 1px solid #EEE
+        background: #F5F5F5
+        color: #404B52
+        width: 24px
+        height: 24px
+        font-size: 12px
+        font-weight: 500
+        &.active
+            border: 1px solid #5932EA
+            background: #5932EA
+            color: #fff
+        &:disabled
+            cursor: no-drop
+            color: rgba(64, 75, 82, 0.3)
