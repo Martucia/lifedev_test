@@ -5,6 +5,7 @@ import styles from "./Sidebar.module.sass";
 import ChevronIcon from "../../shared/ui/icons/chevron-icon";
 import { useContext } from "react";
 import { SidebarContext } from "../layout/Layout";
+import avatar from "@images/avatar.png";
 
 export default function Sidebar() {
   const { isOpen, toggle } = useContext(SidebarContext);
@@ -37,7 +38,7 @@ export default function Sidebar() {
 
         <div className={styles.account}>
           <div className={styles.account__image}>
-            <img src="/src/assets/avatar.png" alt="avatar" />
+            <img src={avatar} alt="avatar" />
           </div>
           <div className={styles.account__inner}>
             <div className={styles.account__inner__name}>Evano</div>

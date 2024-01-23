@@ -21,7 +21,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         toggle: () => setSidebarOpen(!isSidebarOpen),
       }}
     >
-      <div className={styles.container}>
+      <div className={`${styles.container} ${isSidebarOpen && styles.hidden}`}>
         <Sidebar />
         <div className={styles.page}>
           <Header />
