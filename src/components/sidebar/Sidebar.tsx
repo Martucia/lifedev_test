@@ -13,28 +13,30 @@ export default function Sidebar() {
   return (
     <div className={`${styles.sidebar} ${isOpen && styles.show}`}>
       <div className={styles.sidebar__inner}>
-        <Logo />
+        <div>
+          <Logo />
 
-        <nav className={styles.sidebar__nav}>
-          {sidebarLinks.map((link) => (
-            <NavLink
-              onClick={toggle}
-              className={({ isActive }) =>
-                isActive
-                  ? `${styles.sidebar__nav__link} ${styles.active}`
-                  : styles.sidebar__nav__link
-              }
-              key={link.path}
-              to={link.path}
-            >
-              <div className={styles.sidebar__nav__link__inner}>
-                {link.icon()}
-                <span>{link.text}</span>
-              </div>
-              <ChevronIcon />
-            </NavLink>
-          ))}
-        </nav>
+          <nav className={styles.sidebar__nav}>
+            {sidebarLinks.map((link) => (
+              <NavLink
+                onClick={toggle}
+                className={({ isActive }) =>
+                  isActive
+                    ? `${styles.sidebar__nav__link} ${styles.active}`
+                    : styles.sidebar__nav__link
+                }
+                key={link.path}
+                to={link.path}
+              >
+                <div className={styles.sidebar__nav__link__inner}>
+                  {link.icon()}
+                  <span>{link.text}</span>
+                </div>
+                <ChevronIcon />
+              </NavLink>
+            ))}
+          </nav>
+        </div>
 
         <div className={styles.account}>
           <div className={styles.account__image}>
